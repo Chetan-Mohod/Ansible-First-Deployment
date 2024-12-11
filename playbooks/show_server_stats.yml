@@ -1,0 +1,12 @@
+-
+  name: Date playbook
+  hosts: servers
+  tasks:
+    - name: Show date
+      command: date
+    - name: Show RAM
+      command: free -h
+    - name: Show DISK
+      command: df -h
+    - name: Show uptime
+      command: uptime
