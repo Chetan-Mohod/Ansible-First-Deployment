@@ -1,0 +1,22 @@
+-
+  name: Deploy Webpage to nginx/apache
+  become: yes
+  hosts: servers
+  tasks:
+    - name: install nginx/apache
+      apt:
+        name: nginx
+        state: latest
+      when: ansible_distribution == 'Ubuntu'
+
+    - name: start nginx/apache
+      service:
+        name: nginx
+        enabled: yes
+      when: ansible_distribution == 'Ubuntu'
+
+    - name: copy webpage to server destination
+      copy:
+        src: index.html
+        dest: /var/www/html
+      when: ansible_distribution == 'Ubuntu'
