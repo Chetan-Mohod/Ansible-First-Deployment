@@ -6,48 +6,72 @@
     <title>Deployment with Ansible</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #eaeff7;
+            color: #444;
             line-height: 1.6;
         }
         header {
-            background: #007acc;
+            background: linear-gradient(135deg, #1e90ff, #007acc);
             color: white;
             padding: 20px 0;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            font-weight: bold;
         }
         .container {
-            max-width: 800px;
-            margin: 20px auto;
+            max-width: 900px;
+            margin: 40px auto;
             padding: 20px;
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
         }
         .container h2 {
             color: #007acc;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .container h2::before {
+            content: '\1F680'; /* Rocket emoji */
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        ul li::before {
+            content: '\2714'; /* Check mark */
+            color: #28a745;
+            font-weight: bold;
         }
         footer {
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
             background: #007acc;
             color: white;
-            position: absolute;
+            position: relative;
             width: 100%;
-            bottom: 0;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Deployment with Ansible</h1>
+        <h1><span style="font-size: 1.5rem;">⚙️</span> Deployment with Ansible</h1>
     </header>
     <div class="container">
         <h2>What is Ansible?</h2>
@@ -63,6 +87,7 @@
         <p>To start using Ansible for deployment, install it on your control node and define your inventory and playbooks. Execute playbooks using the <code>ansible-playbook</code> command to automate tasks seamlessly.</p>
     </div>
     <footer>
-        <p>&copy; 2024 Deployment Insights</p>
+        <p>&copy; 2024 Deployment Insights | Made with <span style="color: #ff4b5c;">❤</span></p>
     </footer>
 </body>
+</html>
